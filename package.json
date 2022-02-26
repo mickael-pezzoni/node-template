@@ -1,0 +1,37 @@
+{
+    "name": "node-template",
+    "version": "0.0.1",
+    "description": "",
+    "main": "dist/main.js",
+    "scripts": {
+        "build": "rimraf dist && tsc",
+        "start": "ts-node-dev --respawn -- src/main.ts",
+        "lint": "eslint src --ext .ts",
+        "doc": "typedoc src/main.ts",
+        "prettier": "prettier --write ./src",
+        "prepublish": "npm run build",
+        "pre-commit": "npm run lint && npm run prettier",
+        "prepare": "husky install"
+    },
+    "author": "Mickael Pezzoni",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+        "@commitlint/cli": "^16.2.1",
+        "@commitlint/config-conventional": "^16.2.1",
+        "@types/express": "^4.17.13",
+        "@types/node": "^17.0.16",
+        "@typescript-eslint/eslint-plugin": "^5.11.0",
+        "@typescript-eslint/parser": "^5.11.0",
+        "eslint": "^8.8.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.25.4",
+        "eslint-plugin-prettier": "^4.0.0",
+        "husky": "^7.0.4",
+        "prettier": "^2.5.1",
+        "rimraf": "^3.0.2",
+        "ts-node-dev": "^1.1.8",
+        "typedoc": "^0.22.12",
+        "typescript": "^4.5.5"
+    }
+}
