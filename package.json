@@ -4,7 +4,7 @@
     "description": "",
     "main": "dist/main.js",
     "scripts": {
-        "build": "rimraf dist && tsc",
+        "build": "rimraf dist && tsc -p",
         "start": "ts-node-dev --respawn -- src/main.ts",
         "lint": "eslint src --ext .ts",
         "doc": "typedoc src/main.ts",
